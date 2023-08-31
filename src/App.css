@@ -1,0 +1,64 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital@0;1&family=IBM+Plex+Sans+Condensed:ital@0;1&family=IBM+Plex+Sans:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&family=IBM+Plex+Serif:ital@0;1&display=swap");
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.drum-pad {
+  transition: "box-shadow 150ms ease, transform 100ms ease";
+  box-shadow: #888;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 1rem;
+  height: 5rem;
+  margin: 5px;
+  background-color: white;
+  border: 2px solid #888;
+  transform: "scale(1.05)";
+}
+
+.drum-pad {
+  font-size: 28px;
+  letter-spacing: 2px;
+  background-color: #d1d5db;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #000;
+  cursor: pointer;
+  border: 3px solid;
+  padding: 0.25em 0.5em;
+  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px,
+    5px 5px 0px 0px;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  transition: background-color 0.2s, transform 0.2s, box-shadow 0.2s;
+}
+
+#display-card {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.drum-pad.active {
+  box-shadow: 0px 0px 0px 0px !important;
+  top: 5px !important;
+  left: 5px !important;
+  background-color: #f97316 !important;
+}
+
+@media (min-width: 768px) {
+  .drum-pad {
+    padding: 0.25em 0.75em;
+  }
+}
+
+#drum-machine {
+  background-color: #fffde5;
+}
