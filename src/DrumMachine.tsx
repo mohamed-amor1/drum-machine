@@ -179,42 +179,44 @@ export function DrumMachine() {
               C<audio src="/sounds/Dsc_Oh.mp3" id="C"></audio>
             </Grid.Col>
           </Grid>
-          <Flex direction="column" align="center" justify="center" wrap="wrap">
-            <Switch
-              onLabel="ON"
-              offLabel="OFF"
+        </Flex>
+      </Card>
+
+      <Card id="machine-controls" withBorder radius="md">
+        <Flex direction="column" align="center" justify="center" wrap="wrap">
+          <Switch
+            onLabel="ON"
+            offLabel="OFF"
+            size="xl"
+            id="switch"
+            defaultChecked
+            checked={checked}
+            onChange={() => setChecked((prevChecked) => !prevChecked)}
+          />
+          <Card
+            withBorder
+            h="50px"
+            w="200px"
+            shadow="sm"
+            padding="xs"
+            id="display-card"
+          >
+            <Text
+              id="display"
               size="xl"
-              id="switch"
-              defaultChecked
-              checked={checked}
-              onChange={() => setChecked((prevChecked) => !prevChecked)}
-            />
-            <Card
-              withBorder
-              h="50px"
-              w="200px"
-              shadow="sm"
-              padding="xs"
-              id="display-card"
+              weight="400"
+              align="center"
+              ff="IBM Plex Mono, monospace"
+              color="white"
             >
-              <Text
-                id="display"
-                size="xl"
-                weight="400"
-                align="center"
-                variant="gradient"
-                ff="IBM Plex Mono, monospace"
-                gradient={{ from: "orange", to: "red" }}
-              >
-                {`Volume: ${volume}%`}
-              </Text>
-            </Card>
-            <VolumeSlider
-              value={volume}
-              setValue={setVolume}
-              disabled={!checked}
-            />
-          </Flex>
+              {`Volume: ${volume}%`}
+            </Text>
+          </Card>
+          <VolumeSlider
+            value={volume}
+            setValue={setVolume}
+            disabled={!checked}
+          />
         </Flex>
       </Card>
     </Flex>

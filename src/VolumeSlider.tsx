@@ -11,12 +11,14 @@ export default function VolumeSlider(props: VolumeSliderProps) {
   return (
     <>
       <Slider
+        color="red"
         labelTransition="skew-down"
         labelTransitionDuration={150}
         labelTransitionTimingFunction="ease"
         label={(value) => `${value}%`}
         disabled={props.disabled}
         w="200px"
+        mb="sm"
         size="xl"
         radius="xs"
         value={props.value} // Use the value from props

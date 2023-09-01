@@ -14,10 +14,7 @@ export default function Footer() {
             <IconBrandGithub strokeWidth={1.5} />
           </ActionIcon>
         </Anchor>
-        <Anchor
-          href="https://www.linkedin.com/in/mohamedamor1/"
-          target="_blank"
-        >
+        <Anchor href="https://linkedin.com/in/mohamedamor1" target="_blank">
           <ActionIcon variant="subtle">
             <IconBrandLinkedin strokeWidth={1.5} />
           </ActionIcon>
